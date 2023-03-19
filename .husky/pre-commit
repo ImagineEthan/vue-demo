@@ -6,3 +6,4 @@ yarn lint-staged
 
 
 
+pnpm lint && pnpm format
