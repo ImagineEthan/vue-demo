@@ -14,11 +14,6 @@ const routes = createRouter({
             name: 'home',
             component: Home,
         },
-        {
-            path: '/about',
-            name: 'about',
-            component: About,
-        },
     ]
 })
 
