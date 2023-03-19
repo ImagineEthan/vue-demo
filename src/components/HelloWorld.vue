@@ -1,9 +1,9 @@
 <template>
-  <div class=""></div>
+  <div class="">Hello {{ 234 }}</div>
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue"
+
 </script>
 
 <style lang="scss" scoped></style>

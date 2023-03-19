@@ -11,6 +11,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
+    port:8080,
   },
   plugins: [vue()],
   resolve: {
