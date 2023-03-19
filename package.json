@@ -3,10 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "prettier --write",
-      "eslint",
+    "src/**/*.{js,jsx,vue}": [
+      "prettier --write ./src",
+      "eslint --ext .vue,.js,.jsx --fix ./src",
       "git add"
     ]
   },
@@ -25,8 +30,13 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.36.0",
+    "eslint-plugin-vue": "^9.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.4",
