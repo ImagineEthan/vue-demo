@@ -12,7 +12,7 @@ const add = () => {
 </script>
 
 <template>
-  <div>Home Page www {{ count }}</div>
+  <div>Home Page {{ count }}</div>
   <button @click="add">add</button>
   <Hello></Hello>
 </template>

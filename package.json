@@ -3,13 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint"
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint-staged"
+      "pre-commit": "npx run lint-staged"
     }
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx}": [
+      "npx prettier --write",
+      "npx eslint",
+      "git add"
+    ]
   },
   "scripts": {
     "dev": "vite",
@@ -38,7 +42,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
     "husky": "7.0.0",
-    "lint-staged": "11.0.0",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
