@@ -1,15 +1,19 @@
-import {defineStore} from 'pinia'
-import { ref } from 'vue'
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-const Home = defineStore('Home',()=>{
-    const count = ref<number>(12)
+const Home = defineStore(
+  "Home",
+  () => {
+    const count = ref<number>(12);
     function increment() {
-      count.value++
+      count.value++;
     }
 
-    return { count, increment }
-},{
-    persist:true
-})
+    return { count, increment };
+  },
+  {
+    persist: true,
+  }
+);
 
-export default Home
+export default Home;

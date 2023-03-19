@@ -1,15 +1,19 @@
-import {defineStore} from 'pinia'
-import { ref } from 'vue'
+import { defineStore } from "pinia";
+import { ref } from "vue";
 
-const Head = defineStore('Head',()=>{
-    const count = ref(0)
+const Head = defineStore(
+  "Head",
+  () => {
+    const count = ref(0);
     function increment() {
-      count.value++
+      count.value++;
     }
-  
-    return { count, increment }
-},{
-    persist:true
-})
 
-export default Head
+    return { count, increment };
+  },
+  {
+    persist: true,
+  }
+);
+
+export default Head;

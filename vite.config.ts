@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,11 +11,11 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
-    port:8080,
+    port: 8080,
   },
   plugins: [vue()],
   resolve: {
     alias: [{ find: "@", replacement: "/src" }],
-    extensions: ["*", ".js", ".ts" ,".vue"],
+    extensions: ["*", ".js", ".ts", ".vue"],
   },
-})
+});
