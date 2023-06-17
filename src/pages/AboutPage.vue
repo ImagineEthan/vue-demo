@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>About</div>
+  <div>About Page Size</div>
 </template>
 
 <style scoped></style>
